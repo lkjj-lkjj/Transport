@@ -1,7 +1,7 @@
 package com.example.transport.controller;
 
-import com.example.transport.dao.UserDao;
 import com.example.transport.entity.User;
+import com.example.transport.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,7 @@ import java.util.Objects;
 @Controller
 public class UserController {
     @Autowired
-    private UserDao userDao;
+    private UserService userService;
 
     @GetMapping("/login")
     public String showLoginForm(Model model){
@@ -32,7 +32,7 @@ public class UserController {
 
     @PostMapping("/login")
     public String login(@ModelAttribute("user") User user, Model model){
-        User result = userDao.findByUsernameAndPassword(user.getUsername(), user.getPassword());
+        User result = userService.findByUsernameAndPassword(user.getUsername(), user.getPassword());
         if(result != null){
             return "redirect:/index";
         }else{
@@ -48,8 +48,7 @@ public class UserController {
             model.addAttribute("error", "Password not match");
             return "register";
         }
-        user.setAuth(0);
-        userDao.insertUser(user);
+        userService.registerAuthUser(user);
         redirectAttributes.addFlashAttribute("success", "Register success");
         return "redirect:/login";
     }

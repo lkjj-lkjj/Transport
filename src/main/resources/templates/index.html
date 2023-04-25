@@ -78,9 +78,9 @@
 <aside th:fragment="sidebar">
   <nav>
     <ul>
-      <li><a href="#" th:onclick="'changeContent(\'page1\')'">Page 1</a></li>
-      <li><a href="#" th:onclick="'changeContent(\'page2\')'">Page 2</a></li>
-      <li><a href="#" th:onclick="'changeContent(\'page3\')'">Page 3</a></li>
+      <li><a href="#" th:onclick="'changeContent(\'page1\')'">Users</a></li>
+      <li><a href="#" th:onclick="'changeContent(\'page2\')'">Contracts</a></li>
+      <li><a href="#" th:onclick="'changeContent(\'page3\')'">Others</a></li>
     </ul>
   </nav>
 </aside>
@@ -88,16 +88,17 @@
 <main th:fragment="main">
   <div id="page1" class="page-content active">
     <h1>Page 1</h1>
-    <p>This is the content for Page 1.</p>
+    <p>This is the content for All Users.</p>
+    <div th:replace="user.html"></div>
   </div>
   <div id="page2" class="page-content">
     <h1>Page 2</h1>
-    <p>This is the content for Page 2.</p>
+    <p>This is the content for All Contracts.</p>
+    <div th:replace="contract.html"></div>
   </div>
   <div id="page3" class="page-content">
     <h1>Page 3</h1>
     <p>This is the content for Page 3.</p>
-    <div th:replace="contract.html"></div>
   </div>
 </main>
 
