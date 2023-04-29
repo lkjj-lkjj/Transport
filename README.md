@@ -8,4 +8,6 @@ Java EE 小组作业
 设计报告在 System design report
 ```
 # 小组成员
+```
 李可佳，王姝昕，刘畅
+```
