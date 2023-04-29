@@ -1,17 +1,17 @@
 package com.example.transport.entity;
 
 public class User {
-    private int id;
+    private int userid;
     private String username;
     private String password;
     private int auth;
 
-    public int getId() {
-        return id;
+    public int getUserid() {
+        return userid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
     public String getUsername() {

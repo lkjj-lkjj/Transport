@@ -45,11 +45,15 @@ public class UserController {
     public String register(@ModelAttribute("user") User user,
                            @RequestParam("confirm") String confirm, Model model, RedirectAttributes redirectAttributes){
         if(!Objects.equals(user.getPassword(), confirm)){
-            model.addAttribute("error", "Password not match");
+            model.addAttribute("error", "Password not match!");
+            return "register";
+        }
+        if(userService.findByUsername(user.getUsername()) != null){
+            model.addAttribute("error", "User exist!");
             return "register";
         }
         userService.registerAuthUser(user);
-        redirectAttributes.addFlashAttribute("success", "Register success");
+        redirectAttributes.addFlashAttribute("success", "Register success!");
         return "redirect:/login";
     }
 }

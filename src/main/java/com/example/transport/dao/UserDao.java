@@ -17,4 +17,7 @@ public interface UserDao {
 
     @Select("SELECT * FROM user")
     List<User> findALL();
+
+    @Select("SELECT * FROM user WHERE username = #{username}")
+    User findByUsername(String username);
 }
