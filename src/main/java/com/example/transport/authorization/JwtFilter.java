@@ -38,7 +38,7 @@ public class JwtFilter implements Filter
         else {
 
             if (token == null) {
-                response.getWriter().write("error: token is null");
+                response.getWriter().write("token is null");
                 return;
             }
 

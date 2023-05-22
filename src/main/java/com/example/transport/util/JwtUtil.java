@@ -12,10 +12,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @description: Jwt工具类，生成JWT和认证
- * @author: heshi
- */
 public class JwtUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
