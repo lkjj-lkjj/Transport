@@ -6,6 +6,15 @@ public class User {
     private String password;
     private int auth;
 
+    public User(){
+
+    }
+    public User(int userid, String username, String password){
+        this.userid = userid;
+        this.username = username;
+        this.password = password;
+    }
+
     public int getUserid() {
         return userid;
     }

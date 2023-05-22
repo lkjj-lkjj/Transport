@@ -18,19 +18,19 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/login")
+    @GetMapping("/login1")
     public String showLoginForm(Model model){
         model.addAttribute("user", new User());
         return "login";
     }
 
-    @GetMapping("/register")
+    @GetMapping("/register1")
     public String toRegisterView(Model model){
         model.addAttribute("user", new User());
         return "register";
     }
 
-    @PostMapping("/login")
+    @PostMapping("/login1")
     public String login(@ModelAttribute("user") User user, Model model){
         User result = userService.findByUsernameAndPassword(user.getUsername(), user.getPassword());
         if(result != null){
@@ -41,7 +41,7 @@ public class UserController {
         }
     }
 
-    @PostMapping("/register")
+    @PostMapping("/register1")
     public String register(@ModelAttribute("user") User user,
                            @RequestParam("confirm") String confirm, Model model, RedirectAttributes redirectAttributes){
         if(!Objects.equals(user.getPassword(), confirm)){
