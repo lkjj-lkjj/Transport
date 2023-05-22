@@ -37,4 +37,14 @@ public class Contract {
     public void setMoney(double money) {
         this.money = money;
     }
+
+    @Override
+    public String toString() {
+        return "Contract{" +
+                "id=" + '\'' + id + '\'' +
+                ", contractName=" + '\'' + contractName + '\'' +
+                ",username=" + '\'' + username + '\'' +
+                ",money=" + '\'' + money + '\'' +
+                '}';
+    }
 }

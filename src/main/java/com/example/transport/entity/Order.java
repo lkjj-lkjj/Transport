@@ -82,4 +82,19 @@ public class Order {
     public void setState(int state) {
         this.state = state;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "orderid=" + orderid +
+                ", ordername='" + ordername + '\'' +
+                ", description='" + description + '\'' +
+                ", createtime='" + createtime + '\'' +
+                ", starttime='" + starttime + '\'' +
+                ", endtime='" + endtime + '\'' +
+                ", userid=" + userid +
+                ", transporterid=" + transporterid +
+                ", state=" + state +
+                '}';
+    }
 }

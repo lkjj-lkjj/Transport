@@ -46,4 +46,15 @@ public class User {
     public void setAuth(int auth) {
         this.auth = auth;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userid=" + '\'' + userid + '\'' +
+                ", username=" + '\'' + username + '\'' +
+                ",password=" + '\'' + password + '\'' +
+                ",auth=" + '\'' + auth + '\'' +
+                '}';
+    }
+
 }

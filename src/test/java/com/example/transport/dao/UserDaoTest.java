@@ -9,6 +9,9 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
+import java.util.List;
+
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserDaoTest {
@@ -19,18 +22,34 @@ public class UserDaoTest {
     @Test
     @Rollback
     public void findByUsernameAndPassword()throws Exception{
-        System.out.println(userDao.findByUsernameAndPassword("wsx","123"));
+        System.out.println(userDao.findByUsernameAndPassword("lkj","123"));
     }
 
     @Test
     @Rollback
     public void insertUser()throws Exception{
         User user=new User();
-        user.setUsername("www");
+        user.setUsername("wsx");
         user.setPassword("111");
-        user.setAuth(1);
+        user.setAuth(0);
         userDao.insertUser(user);
         System.out.println("success");
+    }
+
+    @Test
+    @Rollback
+    public void findALL()throws Exception{
+        List<User> userList ;
+        userList = userDao.findALL();
+        System.out.println(userList);
+    }
+
+    @Test
+    @Rollback
+    public void findByUsername()throws Exception{
+        User user;
+        user = userDao.findByUsername("lkj");
+        System.out.println(user);
     }
 }
 
