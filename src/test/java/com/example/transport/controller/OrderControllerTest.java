@@ -1,5 +1,7 @@
 package com.example.transport.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.example.transport.entity.Order;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +16,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -102,4 +103,79 @@ public class OrderControllerTest {
                 .andReturn();
     }
 
+    @Test
+    public void receiveOrderByTransporter()throws Exception {
+        mvc = MockMvcBuilders.webAppContextSetup(wac).build();
+        Order order = new Order();
+        order.setOrderid(3);
+
+        String strJson = JSON.toJSONString(order);
+        MvcResult mvcResult = mvc.perform(
+                        MockMvcRequestBuilders.post("http://localhost:8080/secure/receiveorder")
+                                .accept(MediaType.parseMediaType("application/json;charset=UTF-8"))
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(strJson)
+                )
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcResultHandlers.print())
+                .andReturn();
+    }
+
+    @Test
+    public void completeOrder() throws Exception{
+        mvc = MockMvcBuilders.webAppContextSetup(wac).build();
+        Order order = new Order();
+        order.setUserid(1);
+
+        String strJson = JSON.toJSONString(order);
+        MvcResult mvcResult = mvc.perform(
+                        MockMvcRequestBuilders.post("http://localhost:8080/secure/complete")
+                                .accept(MediaType.parseMediaType("application/json;charset=UTF-8"))
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(strJson)
+                )
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcResultHandlers.print())
+                .andReturn();
+    }
+
+    @Test
+    public void insertAnOrder() throws  Exception{
+        mvc = MockMvcBuilders.webAppContextSetup(wac).build();
+        Order order = new Order();
+        order.setUserid(9);
+        order.setOrdername("susususu");
+        order.setDescription("oooooooo");
+        order.setCreatetime("2023-05-Mo 22:56:30");
+        order.setState(0);
+
+        String strJson = JSON.toJSONString(order);
+        MvcResult mvcResult = mvc.perform(
+                        MockMvcRequestBuilders.post("http://localhost:8080/secure/insert")
+                                .accept(MediaType.parseMediaType("application/json;charset=UTF-8"))
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(strJson)
+                )
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcResultHandlers.print())
+                .andReturn();
+    }
+
+    @Test
+    public void revokeOrder() throws Exception {
+        mvc = MockMvcBuilders.webAppContextSetup(wac).build();
+        Order order = new Order();
+        order.setOrderid(10);
+
+        String strJson = JSON.toJSONString(order);
+        MvcResult mvcResult = mvc.perform(
+                        MockMvcRequestBuilders.post("http://localhost:8080/secure/revoke")
+                                .accept(MediaType.parseMediaType("application/json;charset=UTF-8"))
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(strJson)
+                )
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcResultHandlers.print())
+                .andReturn();
+    }
 }
