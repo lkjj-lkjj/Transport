@@ -12,10 +12,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @description: Jwt工具类，生成JWT和认证
- * @author: heshi
- */
 public class JwtUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
@@ -27,7 +23,7 @@ public class JwtUtil {
     /**
      * 过期时间
      **/
-    private static final long EXPIRATION = 10L;//单位为秒
+    private static final long EXPIRATION = 1800L;//单位为秒
 
     /**
      * 生成用户token,设置token超时时间
