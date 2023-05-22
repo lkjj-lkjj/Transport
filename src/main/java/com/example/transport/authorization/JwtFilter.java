@@ -38,13 +38,13 @@ public class JwtFilter implements Filter
         else {
 
             if (token == null) {
-                response.getWriter().write("没有token！");
+                response.getWriter().write("error: token is null");
                 return;
             }
 
             Map<String, Claim> userData = JwtUtil.verifyToken(token);
             if (userData == null) {
-                response.getWriter().write("token不合法！");
+                response.getWriter().write("token illegal");
                 return;
             }
             Integer id = userData.get("id").asInt();
