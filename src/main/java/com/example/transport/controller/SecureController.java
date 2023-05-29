@@ -24,4 +24,6 @@ public class SecureController
         String password= request.getAttribute("password").toString();
         return "当前用户信息id=" + id + ",username=" + userName+ ",password=" + password;
     }
+
+
 }
