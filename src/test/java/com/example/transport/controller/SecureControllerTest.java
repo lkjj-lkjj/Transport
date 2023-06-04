@@ -3,7 +3,7 @@ package com.example.transport.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -17,7 +17,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 
-import javax.servlet.http.HttpServletRequest;
+
 
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -30,7 +30,6 @@ public class SecureControllerTest {
     private WebApplicationContext wac;
     private MockMvc mvc;
 
-    HttpServletRequest requestMock = Mockito.mock(HttpServletRequest.class);
 
     @Test
     public void login()throws Exception {

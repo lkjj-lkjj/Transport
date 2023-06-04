@@ -84,7 +84,7 @@ public class UserControllerTest {
     public void register() throws Exception {
         mvc = MockMvcBuilders.webAppContextSetup(wac).build();
         User user = new User();
-        user.setUsername("wxx");
+        user.setUsername("wsxsx");
         user.setPassword("223");
         user.setAuth(1);
         String strJson = JSON.toJSONString(user);
