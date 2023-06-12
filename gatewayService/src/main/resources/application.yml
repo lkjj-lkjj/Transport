@@ -1,0 +1,45 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: gatewayService # ????
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: '*'
+            allowedMethods: '*'
+            allowedHeaders: '*'
+#      routes:
+#        - id: -SERVICE
+#          uri: lb://PRODUCT-SERVICE
+#          predicates:
+#            - Path=/product/**
+#          filters:
+#            - AddResponseHeader=my-response-header,product.ejavaexample.org
+#            - PrefixPath=/api
+#            - Mypost
+#
+#        - id: USER-SERVICE
+#          uri: lb://USER-SERVICE
+#          predicates:
+#            - Path=/user/**
+#          filters:
+#            - AddResponseHeader=my-response-header,user.ejavaexample.org
+#            - PrefixPath=/api
+#            - MyPreFilter
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+
