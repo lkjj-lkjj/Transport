@@ -1,9 +1,9 @@
 server:
   port: 8888
-
+#  注意：gateway会不支持下划线的命名方式，所以routers中的uri以及predicates和application.name中应命名成中杆线的形式
 spring:
   application:
-    name: gatewayService # ????
+    name: gateway-service
   main:
     allow-bean-definition-overriding: true
   cloud:
@@ -14,24 +14,27 @@ spring:
             allowedOrigins: '*'
             allowedMethods: '*'
             allowedHeaders: '*'
-#      routes:
-#        - id: -SERVICE
-#          uri: lb://PRODUCT-SERVICE
-#          predicates:
-#            - Path=/product/**
-#          filters:
-#            - AddResponseHeader=my-response-header,product.ejavaexample.org
-#            - PrefixPath=/api
-#            - Mypost
-#
-#        - id: USER-SERVICE
-#          uri: lb://USER-SERVICE
-#          predicates:
-#            - Path=/user/**
-#          filters:
-#            - AddResponseHeader=my-response-header,user.ejavaexample.org
-#            - PrefixPath=/api
-#            - MyPreFilter
+      routes:
+        - id: user_service
+          uri: lb://user-service
+          predicates:
+            - Path=/user-service/**
+          filters:
+            - StripPrefix=1
+
+        - id: auth_service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth-service/**
+          filters:
+            - StripPrefix=1
+
+        - id: transporter_service
+          uri: lb://transporter-service
+          predicates:
+            - Path=/transporter-service/**
+          filters:
+            - StripPrefix=1
 
 eureka:
   client:

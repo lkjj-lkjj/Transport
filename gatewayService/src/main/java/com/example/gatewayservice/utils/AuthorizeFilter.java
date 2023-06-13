@@ -1,5 +1,6 @@
 package com.example.gatewayservice.utils;
 
+
 import org.apache.commons.lang.StringUtils;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -26,7 +27,7 @@ public class AuthorizeFilter implements GlobalFilter, Ordered {
         //2. 则获取响应
         ServerHttpResponse response = exchange.getResponse();
         //3. 如果是登录请求则放行
-        if (request.getURI().getPath().contains("/account/login")) {
+        if (request.getURI().getPath().contains("/login")) {
             return chain.filter(exchange);
         }
         //4. 获取请求头
