@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface OrderService {
     List<Order> findOrderByUseridAndState(int userid, int state);
-    void insertOrder(Order order);
-    void deleteOrder(int orderid);
+    int insertOrder(Order order);
+    int deleteOrder(int orderid);
 }

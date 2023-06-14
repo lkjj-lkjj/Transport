@@ -19,12 +19,14 @@ public class OrderServiceImpl implements OrderService {
         return orderDao.findOrderByUseridAndState(userid, state);
     }
     @Override
-    public void insertOrder(Order order) {
-        orderDao.insertOrder(order);
+    public int insertOrder(Order order) {
+        int res = orderDao.insertOrder(order);
+        return res;
     }
 
     @Override
-    public void deleteOrder(int orderid) {
-        orderDao.deleteOrder(orderid);
+    public int deleteOrder(int orderid) {
+        int res = orderDao.deleteOrder(orderid);
+        return res;
     }
 }

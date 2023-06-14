@@ -24,13 +24,15 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void updateOrderState(int state, String starttime, int transporterid, int orderid) {
-        orderDao.updateOrderState(state, starttime, transporterid, orderid);
+    public int updateOrderState(int state, String starttime, int transporterid, int orderid) {
+        int res = orderDao.updateOrderState(state, starttime, transporterid, orderid);
+        return res;
     }
 
     @Override
-    public void completeOrder(int state, String endtime, int orderid) {
-        orderDao.completeOrder(state, endtime, orderid);
+    public int completeOrder(int state, String endtime, int orderid) {
+        int res = orderDao.completeOrder(state, endtime, orderid);
+        return res;
     }
 
 }
