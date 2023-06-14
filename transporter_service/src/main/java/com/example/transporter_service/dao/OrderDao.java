@@ -21,10 +21,10 @@ public interface OrderDao {
     List<Order> findOrderByState(int state);
 
     @Update("UPDATE `order` SET state = #{state}, starttime = #{starttime}, transporterid = #{transporterid} WHERE orderid = #{orderid}")
-    void updateOrderState(int state, String starttime, int transporterid, int orderid);
+    int updateOrderState(int state, String starttime, int transporterid, int orderid);
 
     @Update("UPDATE `order` SET state = #{state}, endtime = #{endtime} WHERE orderid = #{orderid}")
-    void completeOrder(int state, String endtime, int orderid);
+    int completeOrder(int state, String endtime, int orderid);
 
     @Insert("INSERT INTO `order` (ordername, description, createtime, userid, state) VALUES (#{ordername}, #{description}, #{createtime}, #{userid}, #{state})")
     void insertOrder(Order order);

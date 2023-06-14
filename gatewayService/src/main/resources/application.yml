@@ -35,6 +35,10 @@ spring:
             - Path=/transporter-service/**
           filters:
             - StripPrefix=1
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
 
 eureka:
   client:

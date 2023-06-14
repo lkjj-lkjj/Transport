@@ -9,7 +9,7 @@ public interface OrderService {
 
     List<Order> findOrderByState(int state);
 
-    void updateOrderState(int state, String starttime, int transporterid, int orderid);
+    int updateOrderState(int state, String starttime, int transporterid, int orderid);
 
-    void completeOrder(int state, String endtime, int orderid);
+    int completeOrder(int state, String endtime, int orderid);
 }
