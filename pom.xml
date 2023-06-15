@@ -85,6 +85,11 @@
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
             <version>2.1.0.RELEASE</version>
         </dependency>
+        <!--spring cloud sleuth链路追踪-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
 
     </dependencies>
     <dependencyManagement>
