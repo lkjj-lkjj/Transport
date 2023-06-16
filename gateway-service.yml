@@ -1,10 +1,9 @@
 server:
   port: 8888
-#  注意：gateway会不支持下划线的命名方式，所以routers中的uri以及predicates和application.name中应命名成中杆线的形式
 spring:
   application:
     name: gateway-service
-  profile: dev
+  profiles: dev
   main:
     allow-bean-definition-overriding: true
   cloud:
