@@ -25,8 +25,6 @@ eureka:
 
 spring:
   profiles: dev
-  application:
-    name: cloud-eureka
     
 ---
 server:
@@ -51,8 +49,7 @@ eureka:
 
 spring:
   profiles: test
-  application:
-    name: cloud-eureka
+
  
 
 
