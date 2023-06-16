@@ -28,7 +28,7 @@ public class OrderController {
     @GetMapping("/waiting/{id}")
     public Result<?> getWaitingOrders(@PathVariable("id") int id){
         List<Order> orders = orderService.findOrderByUseridAndState(id, 0);
-        if(Result.success().getData() == null){
+        if(orders == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);
@@ -44,7 +44,7 @@ public class OrderController {
     @GetMapping("/intrans/{id}")
     public Result<?> getInTransOrders(@PathVariable("id") int id){
         List<Order> orders = orderService.findOrderByUseridAndState(id, 1);
-        if(Result.success().getData() == null){
+        if(orders == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);
@@ -59,7 +59,7 @@ public class OrderController {
     @GetMapping("/myhistory/{id}")
     public Result<?> getMyHistoryOrders(@PathVariable("id") int id){
         List<Order> orders = orderService.findOrderByUseridAndState(id, 2);
-        if(Result.success().getData() == null){
+        if(orders == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);
