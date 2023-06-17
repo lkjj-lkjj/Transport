@@ -1,77 +1,13 @@
-spring:
-  profiles:
-    active: dev
-    
----
 server:
   port: 8888
 spring:
-  application:
-    name: gateway-service
   profiles: dev
-  main:
-    allow-bean-definition-overriding: true
-  cloud:
-    gateway:
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: '*'
-            allowedMethods: '*'
-            allowedHeaders: '*'
-      routes:
-        - id: user_service
-          uri: lb://user-service
-          predicates:
-            - Path=/user-service/**
-          filters:
-            - StripPrefix=1
-
-        - id: auth_service
-          uri: lb://auth-service
-          predicates:
-            - Path=/auth-service/**
-          filters:
-            - StripPrefix=1
-
-        - id: transporter_service
-          uri: lb://transporter-service
-          predicates:
-            - Path=/transporter-service/**
-          filters:
-            - StripPrefix=1
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    hostname: localhost
-    prefer-ip-address: true
-    
----
-server:
-  port: 7888
-spring:
   application:
     name: gateway-service
-  profiles: test
   main:
     allow-bean-definition-overriding: true
   cloud:
     gateway:
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: '*'
-            allowedMethods: '*'
-            allowedHeaders: '*'
       routes:
         - id: user_service
           uri: lb://user-service
@@ -107,5 +43,10 @@ eureka:
   instance:
     hostname: localhost
     prefer-ip-address: true
+
+
+
+    
+
 
  
