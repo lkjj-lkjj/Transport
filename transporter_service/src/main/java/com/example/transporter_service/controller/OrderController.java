@@ -28,7 +28,7 @@ public class OrderController {
     @GetMapping("/receive")
     public Result<?> getReceiveOrders(){
         List<Order> orders = orderService.findOrderByState(0);
-        if(orders == null){
+        if(Result.success().getData() == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);
@@ -42,7 +42,7 @@ public class OrderController {
     @GetMapping("/myintrans/{transporterid}")
     public Result<?> getMyInTransOrders(@PathVariable("transporterid") int transporterid){
         List<Order> orders = orderService.findOrderByTransporterIdAndState(transporterid, 1);
-        if(orders == null){
+        if(Result.success().getData() == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);
@@ -58,7 +58,7 @@ public class OrderController {
     @GetMapping("/mytranshistory/{transporterid}")
     public Result<?> getMyTransHistoryOrders(@PathVariable("transporterid") int transporterid){
         List<Order> orders = orderService.findOrderByTransporterIdAndState(transporterid, 2);
-        if(orders == null){
+        if(Result.success().getData() == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);

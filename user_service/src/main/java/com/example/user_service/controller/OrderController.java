@@ -1,6 +1,7 @@
 package com.example.user_service.controller;
 
 import com.example.user_service.entity.Order;
+import com.example.user_service.kafka.EventProducer;
 import com.example.user_service.service.OrderService;
 import com.example.user_service.util.Result;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -24,11 +25,14 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+    @Autowired
+    private EventProducer eventProducer;
+
     @HystrixCommand(fallbackMethod = "waitingFallback")  //失败了就会调用下面的这个备选方案
     @GetMapping("/waiting/{id}")
     public Result<?> getWaitingOrders(@PathVariable("id") int id){
         List<Order> orders = orderService.findOrderByUseridAndState(id, 0);
-        if(orders == null){
+        if(Result.success().getData() == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);
@@ -44,7 +48,7 @@ public class OrderController {
     @GetMapping("/intrans/{id}")
     public Result<?> getInTransOrders(@PathVariable("id") int id){
         List<Order> orders = orderService.findOrderByUseridAndState(id, 1);
-        if(orders == null){
+        if(Result.success().getData() == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);
@@ -59,7 +63,7 @@ public class OrderController {
     @GetMapping("/myhistory/{id}")
     public Result<?> getMyHistoryOrders(@PathVariable("id") int id){
         List<Order> orders = orderService.findOrderByUseridAndState(id, 2);
-        if(orders == null){
+        if(Result.success().getData() == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);

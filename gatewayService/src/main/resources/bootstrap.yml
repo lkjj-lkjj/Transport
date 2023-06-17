@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      name: gateway-service # 仓库中的配置文件名称
+      profile: dev
+      label: master
+      uri: http://localhost:3344
+
+
