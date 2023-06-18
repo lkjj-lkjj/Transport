@@ -1,0 +1,651 @@
+2023-06-18 05:35:49.830 [localhost,,] [main] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:3344
+2023-06-18 05:35:50.893 [localhost,,] [main] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Located environment: name=user-service, profiles=[dev], label=master, version=2eb7e1fdc6de94e985b41aba16fa6dd56e87f15b, state=null
+2023-06-18 05:35:50.894 [localhost,,] [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource@1016090398 {name='bootstrapProperties-configClient', properties={config.client.version=2eb7e1fdc6de94e985b41aba16fa6dd56e87f15b}}, BootstrapPropertySource@1320357188 {name='bootstrapProperties-https://gitee.com/shirleyviola/prediction.git/file:c:\users\lkj\AppData\Local\Temp\config-repo-17543183574007836943\user-service.yml', properties={spring.profiles=dev, spring.application.name=user-service, spring.datasource.url=jdbc:mysql://localhost:3306/transport, spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver, spring.datasource.username=root, spring.datasource.password=123456, spring.mvc.pathmatch.matching-strategy=ant_path_matcher, server.port=8081, eureka.client.register-with-eureka=true, eureka.client.fetch-registry=true, eureka.client.service-url.defaultZone=http://localhost:8761/eureka, eureka.instance.hostname=localhost, eureka.instance.prefer-ip-address=true}}]
+2023-06-18 05:35:50.927 [user-service,,] [main] INFO  com.example.user_service.UserServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-18 05:35:52.459 [user-service,,] [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=7adcb1c8-5e94-3c4a-8d83-0bf8748e3a6c
+2023-06-18 05:35:53.713 [user-service,,] [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-06-18 05:35:53.728 [user-service,,] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-06-18 05:35:53.728 [user-service,,] [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-18 05:35:53.729 [user-service,,] [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-18 05:35:53.947 [user-service,,] [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-18 05:35:53.947 [user-service,,] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2994 ms
+2023-06-18 05:35:55.740 [user-service,,] [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-18 05:35:55.750 [user-service,,] [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-18 05:35:57.270 [user-service,,] [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-06-18 05:35:58.226 [user-service,,] [main] INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2023-06-18 05:35:58.306 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2023-06-18 05:35:58.312 [user-service,,] [main] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-06-18 05:35:58.347 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2023-06-18 05:35:58.347 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2023-06-18 05:35:58.347 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2023-06-18 05:35:58.347 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2023-06-18 05:35:58.347 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2023-06-18 05:35:58.347 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2023-06-18 05:35:58.348 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2023-06-18 05:35:58.662 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2023-06-18 05:35:58.669 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2023-06-18 05:35:58.675 [user-service,,] [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-06-18 05:35:58.689 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1687037758689 with initial instances count: 2
+2023-06-18 05:35:58.701 [user-service,,] [main] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Registering application USER-SERVICE with eureka with status UP
+2023-06-18 05:35:58.702 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1687037758702, current=UP, previous=STARTING]
+2023-06-18 05:35:58.704 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081: registering service...
+2023-06-18 05:35:58.752 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081 - registration status: 204
+2023-06-18 05:35:58.753 [user-service,,] [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-my_group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = my_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-06-18 05:35:58.861 [user-service,,] [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.1.2
+2023-06-18 05:35:58.862 [user-service,,] [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: f8c67dc3ae0a3265
+2023-06-18 05:35:58.862 [user-service,,] [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1687037758860
+2023-06-18 05:35:58.865 [user-service,,] [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-my_group-1, groupId=my_group] Subscribed to topic(s): user
+2023-06-18 05:35:58.877 [user-service,,] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-06-18 05:35:58.895 [user-service,,] [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-18 05:35:58.896 [user-service,,] [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8081
+2023-06-18 05:35:59.211 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:35:59.324 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:35:59.336 [user-service,,] [main] INFO  com.example.user_service.UserServiceApplication - Started UserServiceApplication in 11.213 seconds (JVM running for 12.181)
+2023-06-18 05:35:59.433 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:35:59.664 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:00.118 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:00.916 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:02.028 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:02.896 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:03.814 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:04.673 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:05.917 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:06.918 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:07.849 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:08.776 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:09.947 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:11.055 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:12.166 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:13.140 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:14.009 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:14.929 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:16.043 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:17.189 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:18.182 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:19.222 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:20.086 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:21.136 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:22.061 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:23.106 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:24.092 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:24.961 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:26.080 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:27.023 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:28.264 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:29.442 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:30.492 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:31.536 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:32.459 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:33.440 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:34.481 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:35.358 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:36.610 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:37.775 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:38.761 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:39.933 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:40.851 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:42.022 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:42.940 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:44.050 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:44.916 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:45.779 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:46.708 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:47.820 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:48.743 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:49.788 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:50.838 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:52.022 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:53.074 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:54.246 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:55.420 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:56.665 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:57.592 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:58.647 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:36:59.699 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:00.617 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:01.792 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:02.974 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:03.897 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:05.081 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:05.998 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:07.175 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:08.359 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:09.591 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:10.639 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:11.877 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:12.984 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:13.969 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:14.839 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:15.950 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:17.057 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:18.165 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:19.347 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:20.522 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:21.389 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:22.497 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:37:22.599 [user-service,,] [SpringApplicationShutdownHook] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Unregistering application USER-SERVICE with eureka with status DOWN
+2023-06-18 05:37:22.599 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1687037842599, current=DOWN, previous=UP]
+2023-06-18 05:37:22.599 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081: registering service...
+2023-06-18 05:37:22.608 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081 - registration status: 204
+2023-06-18 05:37:22.630 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Resetting generation due to: consumer pro-actively leaving the group
+2023-06-18 05:37:22.630 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Request joining group due to: consumer pro-actively leaving the group
+2023-06-18 05:37:22.631 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-my_group-1, groupId=my_group] Unsubscribed all topics or patterns and assigned partitions
+2023-06-18 05:37:22.631 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Resetting generation due to: consumer pro-actively leaving the group
+2023-06-18 05:37:22.631 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Request joining group due to: consumer pro-actively leaving the group
+2023-06-18 05:37:22.632 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-06-18 05:37:22.632 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-06-18 05:37:22.632 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-06-18 05:37:22.635 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-my_group-1 unregistered
+2023-06-18 05:37:22.637 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - my_group: Consumer stopped
+2023-06-18 05:37:22.657 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-18 05:37:22.666 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2023-06-18 05:37:25.690 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Unregistering ...
+2023-06-18 05:37:25.697 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081 - deregister  status: 200
+2023-06-18 05:37:25.757 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2023-06-18 05:39:47.828 [localhost,,] [main] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:3344
+2023-06-18 05:39:48.948 [localhost,,] [main] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Located environment: name=user-service, profiles=[dev], label=master, version=2eb7e1fdc6de94e985b41aba16fa6dd56e87f15b, state=null
+2023-06-18 05:39:48.950 [localhost,,] [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource@990226843 {name='bootstrapProperties-configClient', properties={config.client.version=2eb7e1fdc6de94e985b41aba16fa6dd56e87f15b}}, BootstrapPropertySource@46415544 {name='bootstrapProperties-https://gitee.com/shirleyviola/prediction.git/file:c:\users\lkj\AppData\Local\Temp\config-repo-17543183574007836943\user-service.yml', properties={spring.profiles=dev, spring.application.name=user-service, spring.datasource.url=jdbc:mysql://localhost:3306/transport, spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver, spring.datasource.username=root, spring.datasource.password=123456, spring.mvc.pathmatch.matching-strategy=ant_path_matcher, server.port=8081, eureka.client.register-with-eureka=true, eureka.client.fetch-registry=true, eureka.client.service-url.defaultZone=http://localhost:8761/eureka, eureka.instance.hostname=localhost, eureka.instance.prefer-ip-address=true}}]
+2023-06-18 05:39:48.981 [user-service,,] [main] INFO  com.example.user_service.UserServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-18 05:39:50.383 [user-service,,] [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=7adcb1c8-5e94-3c4a-8d83-0bf8748e3a6c
+2023-06-18 05:39:51.336 [user-service,,] [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-06-18 05:39:51.348 [user-service,,] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-06-18 05:39:51.349 [user-service,,] [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-18 05:39:51.349 [user-service,,] [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-18 05:39:51.565 [user-service,,] [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-18 05:39:51.566 [user-service,,] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2566 ms
+2023-06-18 05:39:53.073 [user-service,,] [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-18 05:39:53.080 [user-service,,] [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-18 05:39:54.341 [user-service,,] [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-06-18 05:39:55.155 [user-service,,] [main] INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2023-06-18 05:39:55.215 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2023-06-18 05:39:55.220 [user-service,,] [main] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-06-18 05:39:55.257 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2023-06-18 05:39:55.258 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2023-06-18 05:39:55.258 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2023-06-18 05:39:55.258 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2023-06-18 05:39:55.258 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2023-06-18 05:39:55.258 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2023-06-18 05:39:55.258 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2023-06-18 05:39:55.538 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2023-06-18 05:39:55.544 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2023-06-18 05:39:55.550 [user-service,,] [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-06-18 05:39:55.563 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1687037995562 with initial instances count: 2
+2023-06-18 05:39:55.574 [user-service,,] [main] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Registering application USER-SERVICE with eureka with status UP
+2023-06-18 05:39:55.575 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1687037995575, current=UP, previous=STARTING]
+2023-06-18 05:39:55.576 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081: registering service...
+2023-06-18 05:39:55.634 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081 - registration status: 204
+2023-06-18 05:39:55.638 [user-service,,] [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-my_group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = my_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-06-18 05:39:55.740 [user-service,,] [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.1.2
+2023-06-18 05:39:55.740 [user-service,,] [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: f8c67dc3ae0a3265
+2023-06-18 05:39:55.740 [user-service,,] [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1687037995738
+2023-06-18 05:39:55.743 [user-service,,] [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-my_group-1, groupId=my_group] Subscribed to topic(s): user
+2023-06-18 05:39:55.752 [user-service,,] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-06-18 05:39:55.767 [user-service,,] [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-18 05:39:55.767 [user-service,,] [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8081
+2023-06-18 05:39:56.055 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:39:56.171 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:39:56.196 [user-service,,] [main] INFO  com.example.user_service.UserServiceApplication - Started UserServiceApplication in 9.933 seconds (JVM running for 10.925)
+2023-06-18 05:39:56.343 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:39:56.518 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:39:57.007 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:39:57.949 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:39:58.816 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:39:59.934 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:01.105 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:02.367 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:03.234 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:04.232 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:05.346 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:06.277 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:07.272 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:08.263 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:09.456 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:10.561 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:11.674 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:12.653 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:13.884 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:14.867 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:15.728 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:16.831 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:17.878 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:19.110 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:20.090 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:21.267 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:22.194 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:23.308 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:24.539 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:25.710 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:26.633 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:27.493 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:28.414 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:29.333 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:30.505 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:31.550 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:32.406 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:33.400 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:34.259 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:35.241 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:36.099 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:37.085 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:38.010 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:38.930 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:39.978 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:40.898 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:41.883 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:43.111 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:44.342 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:45.388 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:46.444 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:47.543 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:48.771 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:49.815 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:50.733 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:51.967 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:52.886 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:53.813 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:54.683 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:55.793 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:56.721 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:57.840 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:40:59.026 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:00.146 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:01.193 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:02.109 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:03.091 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:04.261 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:05.308 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:06.247 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:07.240 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:08.358 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:09.350 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:10.281 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:11.332 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:12.380 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:13.366 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:14.426 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:15.601 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:16.727 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:17.655 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:18.644 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:19.700 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:20.629 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:21.680 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:22.723 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:23.832 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:24.692 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:25.737 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:26.910 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:28.078 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:29.304 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:30.164 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:31.148 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-my_group-1, groupId=my_group] Node -1 disconnected.
+2023-06-18 05:41:31.596 [user-service,,] [SpringApplicationShutdownHook] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Unregistering application USER-SERVICE with eureka with status DOWN
+2023-06-18 05:41:31.596 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1687038091596, current=DOWN, previous=UP]
+2023-06-18 05:41:31.596 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081: registering service...
+2023-06-18 05:41:31.606 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081 - registration status: 204
+2023-06-18 05:41:31.629 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Resetting generation due to: consumer pro-actively leaving the group
+2023-06-18 05:41:31.629 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Request joining group due to: consumer pro-actively leaving the group
+2023-06-18 05:41:31.629 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-my_group-1, groupId=my_group] Unsubscribed all topics or patterns and assigned partitions
+2023-06-18 05:41:31.629 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Resetting generation due to: consumer pro-actively leaving the group
+2023-06-18 05:41:31.629 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Request joining group due to: consumer pro-actively leaving the group
+2023-06-18 05:41:31.630 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-06-18 05:41:31.630 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-06-18 05:41:31.630 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-06-18 05:41:31.632 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-my_group-1 unregistered
+2023-06-18 05:41:31.634 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - my_group: Consumer stopped
+2023-06-18 05:41:31.654 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-18 05:41:31.662 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2023-06-18 05:41:34.684 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Unregistering ...
+2023-06-18 05:41:34.693 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081 - deregister  status: 200
+2023-06-18 05:41:34.754 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2023-06-18 05:43:12.907 [localhost,,] [main] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:3344
+2023-06-18 05:43:13.981 [localhost,,] [main] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Located environment: name=user-service, profiles=[dev], label=master, version=2eb7e1fdc6de94e985b41aba16fa6dd56e87f15b, state=null
+2023-06-18 05:43:13.982 [localhost,,] [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource@2095573052 {name='bootstrapProperties-configClient', properties={config.client.version=2eb7e1fdc6de94e985b41aba16fa6dd56e87f15b}}, BootstrapPropertySource@1241897134 {name='bootstrapProperties-https://gitee.com/shirleyviola/prediction.git/file:c:\users\lkj\AppData\Local\Temp\config-repo-17543183574007836943\user-service.yml', properties={spring.profiles=dev, spring.application.name=user-service, spring.datasource.url=jdbc:mysql://localhost:3306/transport, spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver, spring.datasource.username=root, spring.datasource.password=123456, spring.mvc.pathmatch.matching-strategy=ant_path_matcher, server.port=8081, eureka.client.register-with-eureka=true, eureka.client.fetch-registry=true, eureka.client.service-url.defaultZone=http://localhost:8761/eureka, eureka.instance.hostname=localhost, eureka.instance.prefer-ip-address=true}}]
+2023-06-18 05:43:14.012 [user-service,,] [main] INFO  com.example.user_service.UserServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-18 05:43:15.342 [user-service,,] [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=7adcb1c8-5e94-3c4a-8d83-0bf8748e3a6c
+2023-06-18 05:43:16.283 [user-service,,] [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-06-18 05:43:16.294 [user-service,,] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-06-18 05:43:16.294 [user-service,,] [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-18 05:43:16.294 [user-service,,] [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-18 05:43:16.476 [user-service,,] [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-18 05:43:16.476 [user-service,,] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2443 ms
+2023-06-18 05:43:18.044 [user-service,,] [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-18 05:43:18.050 [user-service,,] [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-18 05:43:19.273 [user-service,,] [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-06-18 05:43:20.037 [user-service,,] [main] INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2023-06-18 05:43:20.098 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2023-06-18 05:43:20.104 [user-service,,] [main] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-06-18 05:43:20.143 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2023-06-18 05:43:20.143 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2023-06-18 05:43:20.143 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2023-06-18 05:43:20.143 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2023-06-18 05:43:20.143 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2023-06-18 05:43:20.143 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2023-06-18 05:43:20.144 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2023-06-18 05:43:20.423 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2023-06-18 05:43:20.430 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2023-06-18 05:43:20.436 [user-service,,] [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-06-18 05:43:20.449 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1687038200448 with initial instances count: 2
+2023-06-18 05:43:20.461 [user-service,,] [main] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Registering application USER-SERVICE with eureka with status UP
+2023-06-18 05:43:20.461 [user-service,,] [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1687038200461, current=UP, previous=STARTING]
+2023-06-18 05:43:20.463 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081: registering service...
+2023-06-18 05:43:20.510 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081 - registration status: 204
+2023-06-18 05:43:20.511 [user-service,,] [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-my_group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = my_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-06-18 05:43:20.617 [user-service,,] [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.1.2
+2023-06-18 05:43:20.617 [user-service,,] [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: f8c67dc3ae0a3265
+2023-06-18 05:43:20.617 [user-service,,] [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1687038200615
+2023-06-18 05:43:20.620 [user-service,,] [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-my_group-1, groupId=my_group] Subscribed to topic(s): user
+2023-06-18 05:43:20.629 [user-service,,] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-06-18 05:43:20.645 [user-service,,] [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-06-18 05:43:20.646 [user-service,,] [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8081
+2023-06-18 05:43:21.036 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-my_group-1, groupId=my_group] Resetting the last seen epoch of partition user-0 to 0 since the associated topicId changed from null to KrSaVA45RAeGL99kvq7OgA
+2023-06-18 05:43:21.039 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-my_group-1, groupId=my_group] Cluster ID: cZp1RZptTKS6xRydcXe_zQ
+2023-06-18 05:43:21.040 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Discovered group coordinator LAPTOP-H5J7FNPG.mshome.net:9092 (id: 2147483647 rack: null)
+2023-06-18 05:43:21.043 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] (Re-)joining group
+2023-06-18 05:43:21.056 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Request joining group due to: need to re-join with the given member-id
+2023-06-18 05:43:21.056 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] (Re-)joining group
+2023-06-18 05:43:21.070 [user-service,,] [main] INFO  com.example.user_service.UserServiceApplication - Started UserServiceApplication in 9.697 seconds (JVM running for 10.732)
+2023-06-18 05:43:21.741 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Successfully joined group with generation Generation{generationId=16, memberId='consumer-my_group-1-23d030b8-0327-4ef2-9994-712be0d3d06b', protocol='range'}
+2023-06-18 05:43:21.749 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Successfully synced group in generation Generation{generationId=16, memberId='consumer-my_group-1-23d030b8-0327-4ef2-9994-712be0d3d06b', protocol='range'}
+2023-06-18 05:43:21.753 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Notifying assignor about the new Assignment(partitions=[user-0])
+2023-06-18 05:43:21.756 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Adding newly assigned partitions: user-0
+2023-06-18 05:43:21.769 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Setting offset for partition user-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LAPTOP-H5J7FNPG.mshome.net:9092 (id: 0 rack: null)], epoch=0}}
+2023-06-18 05:43:21.770 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - my_group: partitions assigned: [user-0]
+2023-06-18 05:44:34.359 [user-service,,] [SpringApplicationShutdownHook] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Unregistering application USER-SERVICE with eureka with status DOWN
+2023-06-18 05:44:34.359 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1687038274359, current=DOWN, previous=UP]
+2023-06-18 05:44:34.359 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081: registering service...
+2023-06-18 05:44:34.372 [user-service,,] [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081 - registration status: 204
+2023-06-18 05:44:34.393 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Revoke previously assigned partitions user-0
+2023-06-18 05:44:34.393 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - my_group: partitions revoked: [user-0]
+2023-06-18 05:44:34.394 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Member consumer-my_group-1-23d030b8-0327-4ef2-9994-712be0d3d06b sending LeaveGroup request to coordinator LAPTOP-H5J7FNPG.mshome.net:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-06-18 05:44:34.394 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Resetting generation due to: consumer pro-actively leaving the group
+2023-06-18 05:44:34.394 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Request joining group due to: consumer pro-actively leaving the group
+2023-06-18 05:44:34.394 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-my_group-1, groupId=my_group] Unsubscribed all topics or patterns and assigned partitions
+2023-06-18 05:44:34.395 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Resetting generation due to: consumer pro-actively leaving the group
+2023-06-18 05:44:34.395 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my_group-1, groupId=my_group] Request joining group due to: consumer pro-actively leaving the group
+2023-06-18 05:44:34.398 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-06-18 05:44:34.398 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-06-18 05:44:34.399 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-06-18 05:44:34.403 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-my_group-1 unregistered
+2023-06-18 05:44:34.403 [user-service,,] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - my_group: Consumer stopped
+2023-06-18 05:44:34.424 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-06-18 05:44:34.432 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2023-06-18 05:44:37.444 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Unregistering ...
+2023-06-18 05:44:37.451 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_USER-SERVICE/LAPTOP-H5J7FNPG:user-service:8081 - deregister  status: 200
+2023-06-18 05:44:37.525 [user-service,,] [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

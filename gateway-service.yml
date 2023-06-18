@@ -8,6 +8,10 @@ spring:
     allow-bean-definition-overriding: true
   cloud:
     gateway:
+<<<<<<< HEAD
+=======
+
+>>>>>>> d3f36f14eeaa21c02bd50733f7012ffacc8b6b73
       routes:
         - id: user_service
           uri: lb://user-service

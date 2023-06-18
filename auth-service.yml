@@ -10,10 +10,13 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+<<<<<<< HEAD
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
       group-id: my_group
+=======
+>>>>>>> d3f36f14eeaa21c02bd50733f7012ffacc8b6b73
 
 server:
   port: 8082

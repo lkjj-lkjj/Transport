@@ -4,14 +4,25 @@ server:
 eureka:
   instance:
     hostname: localhost
+<<<<<<< HEAD
+=======
+
+>>>>>>> d3f36f14eeaa21c02bd50733f7012ffacc8b6b73
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 6000
     peer-node-read-timeout-ms: 90000
     response-cache-update-interval-ms: 5000
   client:
+<<<<<<< HEAD
     register-with-eureka: false
     fetch-registry: false
+=======
+
+    register-with-eureka: false
+    fetch-registry: false
+
+>>>>>>> d3f36f14eeaa21c02bd50733f7012ffacc8b6b73
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
@@ -19,3 +30,7 @@ spring:
   profiles: dev
   application:
     name: cloud-eureka
+<<<<<<< HEAD
+=======
+    
+>>>>>>> d3f36f14eeaa21c02bd50733f7012ffacc8b6b73
