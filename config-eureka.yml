@@ -4,14 +4,12 @@ server:
 eureka:
   instance:
     hostname: localhost
-
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 6000
     peer-node-read-timeout-ms: 90000
     response-cache-update-interval-ms: 5000
   client:
-
     register-with-eureka: false
     fetch-registry: false
 
@@ -22,4 +20,3 @@ spring:
   profiles: dev
   application:
     name: cloud-eureka
-    

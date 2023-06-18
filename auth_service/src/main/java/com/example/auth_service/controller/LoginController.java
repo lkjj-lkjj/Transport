@@ -1,6 +1,7 @@
 package com.example.auth_service.controller;
 
 import com.example.auth_service.entity.User;
+import com.example.auth_service.kafka.EventProducer;
 import com.example.auth_service.service.UserService;
 import com.example.auth_service.util.JwtUtil;
 import com.example.auth_service.util.Result;
@@ -27,6 +28,9 @@ public class LoginController
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private EventProducer eventProducer;
+
     @HystrixCommand(fallbackMethod = "loginFallback")
     @PostMapping("/login")
     public Result<?> login(@RequestBody User user)
@@ -38,11 +42,15 @@ public class LoginController
             map.put("token", token);
             map.put("auth", result.getAuth());
             map.put("id", result.getUserid());
+            if(result.getAuth() == 0){
+                eventProducer.sendEvent("user","Login Success!");
+            }else{
+                eventProducer.sendEvent("trans", "Login Success!");
+            }
             return Result.success(map);
         }else {
             throw new RuntimeException("login throw RuntimeException");
         }
-//        return Result.error("500","login error");
     }
 
     public Result<?> loginFallback(@RequestBody User user) {

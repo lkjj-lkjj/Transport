@@ -24,17 +24,16 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @HystrixCommand(fallbackMethod = "receiveFallback") //失败了就会调用下面的这个备选方案
+    @HystrixCommand(fallbackMethod = "receiveFallback")
     @GetMapping("/receive")
     public Result<?> getReceiveOrders(){
         List<Order> orders = orderService.findOrderByState(0);
-        if(orders.isEmpty()){
+        if(Result.success().getData() == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);
     }
 
-    //备选方案
     public Result<?> receiveFallback() {
         return Result.error("204","No receive orders");
     }
@@ -43,7 +42,7 @@ public class OrderController {
     @GetMapping("/myintrans/{transporterid}")
     public Result<?> getMyInTransOrders(@PathVariable("transporterid") int transporterid){
         List<Order> orders = orderService.findOrderByTransporterIdAndState(transporterid, 1);
-        if(orders.isEmpty()){
+        if(Result.success().getData() == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);
@@ -59,7 +58,7 @@ public class OrderController {
     @GetMapping("/mytranshistory/{transporterid}")
     public Result<?> getMyTransHistoryOrders(@PathVariable("transporterid") int transporterid){
         List<Order> orders = orderService.findOrderByTransporterIdAndState(transporterid, 2);
-        if(orders.isEmpty()){
+        if(Result.success().getData() == null){
             throw new RuntimeException("orders throw RuntimeException");
         }
         return Result.success(orders);
