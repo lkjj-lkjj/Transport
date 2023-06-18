@@ -15,6 +15,7 @@ spring:
     consumer:
       group-id: my_group
 
+
 server:
   port: 8081
 
